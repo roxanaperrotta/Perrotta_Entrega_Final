@@ -1,8 +1,15 @@
-# React + Vite
+| Nombre | Apellido | Curso | Comisión
+| ----------- | ----------- | --------- | ----------
+| Roxana | Perrotta | React JS |  60815 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PROYECTO**
 
-Currently, two official plugins are available:
+Este es un proyecto e-commerce de una casa de comidas de la zona sur de Mar del Plata: **Ruta 11 - Comidas.**
+Se corresponde con un trabajo académico del curso de  **_REACT JS, CoderHouse._**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+**Conoce más del comercio en redes sociales**
+[Instagram](https://www.instagram.com/ruta11comidas/)
+
+**Conoce más de mí:**
+[LinkedIn](https://www.linkedin.com/in/roxana-perrotta-97b848288/)
