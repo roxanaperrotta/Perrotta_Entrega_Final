@@ -11,7 +11,7 @@ const ItemListContainer = () => {
   const productos = [
     {
         id: '1',
-        imagen:"../public/imagenes/empanadacarne.jpeg",
+        imagen:"../imagenes/empanadacarne.jpeg",
         categoria: 'empanada',
         nombre: 'Empanada de Carne',
         descripción: 'empanada rellena de carne de ternera cortada a cuchillo con huevo y aceituna',
@@ -20,7 +20,7 @@ const ItemListContainer = () => {
       },
       {
         id: '2',
-        imagen:"../public/imagenes/empanadajamon.png",
+        imagen:"../imagenes/empanadajamon.png",
         categoria:'empanada',
         nombre: 'Empanada de Jamón y Queso',
         descripción: 'empanada rellena de jamón y queso',
@@ -29,7 +29,7 @@ const ItemListContainer = () => {
       },
       {
         id: '3',
-        imagen: "../public/imagenes/muzarela.jpeg",
+        imagen: "../imagenes/muzarela.jpeg",
         categoria:'pizza',
         nombre: 'Pizza Muzarella',
         descripción: 'Pizza de muzarella, tomate y aceitunas',
@@ -38,7 +38,7 @@ const ItemListContainer = () => {
       },
       {
         id: '4',
-        imagen:"../public/imagenes/cuatro.jpeg",
+        imagen:"../imagenes/cuatro.jpeg",
         categoria:'pizza',
         nombre: 'Pizza cuatro quesos',
         descripción: 'pizza a los cuatro quesos: parmesano, roquefort, muzarella y fontina',
@@ -47,7 +47,7 @@ const ItemListContainer = () => {
       },
       {
         id: '5',
-        imagen:"../public/imagenes/tartaverdura.jpeg",
+        imagen:"../imagenes/tartaverdura.jpeg",
         categoria:'tarta',
         nombre: 'tarta de verdura',
         descripción: 'tarta rellena de espinaca y muzarella',

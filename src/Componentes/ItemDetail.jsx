@@ -1,6 +1,6 @@
 import React from 'react'
 import {useParams } from 'react-router-dom'
-import { Card, CardBody, Stack, Heading, Divider, CardFooter, Button, ButtonGroup, Text } from '@chakra-ui/react'
+import { Card, CardBody, Stack, Heading, Divider, CardFooter, Button, ButtonGroup, Text, Image } from '@chakra-ui/react'
 import { useState } from 'react'
 
 const ItemDetail = ({productos}) => {
@@ -19,6 +19,7 @@ const ItemDetail = ({productos}) => {
        }
      
        const agregar=()=>{
+        
          alert(`Productos agregados ${contador}`)
        }
 
@@ -30,7 +31,7 @@ const ItemDetail = ({productos}) => {
             <Card maxW='sm'>
             <CardBody>
               <Stack mt='6' spacing='3'>
-                <Text>imagen</Text> 
+              <Image src={`${p.imagen}`}/>
                 <Heading size='md'>{p.nombre}</Heading>
                 <Text>{p.descripción}</Text>
                 <Text>${p.precio}</Text>
@@ -39,18 +40,18 @@ const ItemDetail = ({productos}) => {
             <Divider />
             <CardFooter>
               <ButtonGroup spacing='2'>
-                  <Button variant='solid' bgColor='salmon'>
-                    <button onClick={suma}>+</button>
+                  <Button variant='solid' bgColor='peachpuff'>
+                    <button onClick={resta}>-</button>
                   </Button>
               
                   <p>{contador}</p>
                 
-                  <Button variant='solid' backgroundColor='salmon'>
-                     <button onClick={resta}>-</button>
+                  <Button variant='solid' backgroundColor='peachpuff'>
+                     <button onClick={suma}>+</button>
                   </Button>
 
-                  <Button variant='solid' bgColor='cornsilk'>
-                     <button onClick={agregar}>Agregar al Carrito</button>
+                  <Button variant='solid' bgColor='black'>
+                     <button onClick={agregar}><h3>Agregar al Carrito</h3></button>
                   </Button>
 
               </ButtonGroup>

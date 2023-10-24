@@ -3,20 +3,21 @@ import CartWidget from './CartWidget'
 import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer, } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
+
 const Navbar = () => {
   return (
-<div className='testeo'>
+<div >
         <Flex>
-            <Box p={4} backgroundColor={'cornsilk'}>
+            <Box p={4} backgroundColor={'peachpuff'}>
               <Link to={"/"}>
-               <h3>Ruta 11-Casa de Comidas</h3> 
+               <h2>Ruta 11-Casa de Comidas</h2> 
               </Link>
             </Box>
         <Spacer/>
             <Box>
                 <Menu>
-                    <MenuButton p= {4} bgColor={'salmon'}>
-                         Categorías
+                    <MenuButton p= {4} bgColor={'black'}>
+                         <p class="pcategoria">Categorías</p>
                     </MenuButton>
                     <MenuList>
                        <MenuItem > 

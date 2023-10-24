@@ -1,5 +1,6 @@
-body{
+/*body{
   width: 100vw;
+ 
 }
 
 #root {
@@ -46,8 +47,33 @@ body{
 }
 
 .testeo{
-  width: 100vw;
+  width: 100dvw;
   align-items: center;
   justify-content: center;
   align-content: center;
+}
+*/
+.pcategoria{
+  color:cornsilk;
+}
+
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+h3{
+  color:cornsilk;
+}
+.mibody{
+  background-color: beige;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#root {
+  
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
