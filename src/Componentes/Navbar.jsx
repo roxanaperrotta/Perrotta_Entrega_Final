@@ -1,6 +1,6 @@
 import React from 'react'
 import CartWidget from './CartWidget'
-import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer, } from '@chakra-ui/react'
+import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer, Image} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 
@@ -8,9 +8,11 @@ const Navbar = () => {
   return (
 <div >
         <Flex>
-            <Box p={4} backgroundColor={'peachpuff'}>
+            <Box p={0} >
               <Link to={"/"}>
-               <h2>Ruta 11-Casa de Comidas</h2> 
+                <Image src="../imagenes/logo.PNG" class="milogo"> 
+                </Image>
+                <h5>Comidas</h5>
               </Link>
             </Box>
         <Spacer/>

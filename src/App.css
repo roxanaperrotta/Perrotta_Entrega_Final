@@ -55,6 +55,7 @@
 */
 .pcategoria{
   color:cornsilk;
+ 
 }
 
 h2{
@@ -76,4 +77,15 @@ h3{
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.milogo{
+  height:60px;
+  width:60px;
+  margin:0px;
+}
+
+h5{
+  font-size: xx-small;
+  font-style: italic;
 }

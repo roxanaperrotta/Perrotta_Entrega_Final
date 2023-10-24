@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Item = ({nombre, imagen, id}) => {
   return (
     <div>
-        <Card maxW='sm'>
+        <Card  maxW='sm'>
            <CardBody>
                 <Stack mt='6' spacing='3'>
       
