@@ -7,6 +7,10 @@ import Cart from './Componentes/Cart'
 import ItemDetailContainer from './Componentes/ItemDetailContainer'
 import ItemList from './Componentes/ItemList'
 import './App.css'
+import Form from './Componentes/Form'
+import { ShoppingCartProvider } from './context.jsx/ShoppingCartContext'
+import Rendering from './Componentes/Rendering'
+
 
 
 const App = () => {
@@ -14,26 +18,32 @@ const App = () => {
   
   return (
     <div>
-     <BrowserRouter>
-          <Navbar/>
+    
+  
      
-          <Routes>
+     
+        <BrowserRouter>
+     <ShoppingCartProvider>      
+         <Navbar/>
+     
+              <Routes>
 
-              <Route exact path='/' element = {<ItemListContainer/>}/>
+                  <Route exact path='/' element = {<ItemListContainer/>}/>
 
-              <Route exact path='/categoria/:categoria' element = {<ItemListContainer/>}/>
+                  <Route exact path='/categoria/:categoria' element = {<ItemListContainer/>}/>
 
-              <Route exact path='/cart' element = {<Cart/>}/>
+                 <Route exact path='/cart' element = {<Cart/>}/>
 
-              <Route exact path='/producto/:id' element = {<ItemDetailContainer/>}/>
-
-
-
+                 <Route exact path='/productos/:id' element = {<ItemDetailContainer/>}/>
 
           </Routes>
-     </BrowserRouter>
-    
-
+     </ShoppingCartProvider>       
+          </BrowserRouter>
+   
+   {/* <>
+    <Form/>
+    </>
+*/}
      
     </div>
   )

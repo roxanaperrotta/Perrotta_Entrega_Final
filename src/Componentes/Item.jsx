@@ -10,7 +10,7 @@ const Item = ({nombre, imagen, id}) => {
            <CardBody>
                 <Stack mt='6' spacing='3'>
       
-                     <Image src={`producto/${imagen}`}/>
+                     <Image src={imagen}/>
     
                      <Heading size='md'><h2>{nombre}</h2></Heading>
                  </Stack>
@@ -20,7 +20,7 @@ const Item = ({nombre, imagen, id}) => {
    
             <ButtonGroup spacing='2'>
                <Button variant='solid' bgColor='black'>
-                  <Link to={`/producto/${id}`}>
+                  <Link to={`/productos/${id}`}>
                        <h3>Ver detalle</h3> 
                   </Link>
                 </Button> 
