@@ -9,7 +9,7 @@ Se corresponde con un trabajo académico del curso de  **_REACT JS, CoderHouse._
 
 GIF de presentación de app
 
-[GIF] (public/gifpresentacion.gif)
+[GIF](https://github.com/roxanaperrotta/Perrotta_PrimeraEntrega/blob/main/public/gifpresentacion.gif)
 
 **Conoce más del comercio en redes sociales**
 [Instagram](https://www.instagram.com/ruta11comidas/)
