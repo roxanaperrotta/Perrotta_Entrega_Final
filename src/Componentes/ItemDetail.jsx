@@ -13,7 +13,7 @@ const ItemDetail = ({producto}) => {
  
   const {id}=useParams ()
   const {agregarAlCarrito} = useContext (CartContext)
-  //const SendItemToCart = () => AddItemToCart(producto, cantidad)
+
 
       
   return (
@@ -31,14 +31,9 @@ const ItemDetail = ({producto}) => {
             <Divider />
             <CardFooter>
               <ButtonGroup spacing='2'>
-              <ItemCount /> 
+              <ItemCount producto={producto}/> 
               </ButtonGroup>
-              <Box >
-               <Button variant='solid' bgColor='black'>
-                 <button onClick={agregarAlCarrito}><h3>Agregar al Carrito</h3></button>
-          
-               </Button>
-               </Box>
+             
             </CardFooter>
           </Card>    
         

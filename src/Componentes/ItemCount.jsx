@@ -7,13 +7,18 @@ import { CartContext } from '../context.jsx/ShoppingCartContext'
 
 
 
-const ItemCount = () => {
+
+const ItemCount = ({producto}) => {
+
+  console.log(producto)
+  
+
 
   
+   
+    const {agregarProducto, carrito, cantidad, setCantidad, suma, resta} = useContext(CartContext)
+   
     
-    const {agregarAlCarrito, carrito, cantidad, setCantidad, suma, resta} = useContext(CartContext)
-   
-   
    
   
        
@@ -35,7 +40,12 @@ const ItemCount = () => {
                     <button onClick={suma}>+</button>
                 </Button>
         </Box>
-        
+        <Box >
+               <Button variant='solid' bgColor='black'>
+                 <button onClick ={() =>agregarProducto (producto, cantidad)}><h3>Agregar al Carrito</h3></button>
+          
+               </Button>
+               </Box>
         <Divider/>
 
      
@@ -44,6 +54,6 @@ const ItemCount = () => {
   )
 }
 
-console.log()
+
 
 export default ItemCount 

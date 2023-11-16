@@ -8,7 +8,7 @@ import ItemDetail from './ItemDetail'
 
 const Cart = () => {
 
-  const { carrito, setCarrito, agregarAlCarrito, eliminarDelCarrito, TotalCarrito } = useContext (CartContext)
+  const { carrito } = useContext (CartContext)
   
 
 
@@ -20,17 +20,19 @@ const Cart = () => {
   return (
   // TotalCarrito ()  !== 0 ?
 
+ 
     <div>
-      <h2>contenido del carrito</h2>
-     
-     <ul>
-        {carrito.map((producto)=> (
+      <h2>Contenido del carrito</h2>
+      <ul>
+        {carrito.map((producto) => (
           <li key={producto.id}>
-            {producto.nombre} - cantidad: {producto.cantidad} - Precio por unidad : ${producto.precio} {""}
-         
+            {producto.nombre} - Cantidad: {producto.cantidad} - Precio por unidad: ${producto.precio}
           </li>
         ))}
       </ul>
+    </div>
+  );
+};
     {/*} <>
             <Card maxW='sm'>
             <CardBody>
@@ -49,11 +51,11 @@ const Cart = () => {
           </>
         */}
 
-     </div>
+  
     // : <h1>Carrito vacio</h1>
-  )
+  
  
 
-}
+
 
 export default Cart
