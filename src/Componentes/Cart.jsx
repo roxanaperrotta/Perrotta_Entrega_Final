@@ -24,9 +24,10 @@ const Cart = () => {
     <div>
       <h2>Contenido del carrito</h2>
       <ul>
-        {carrito.map((producto) => (
-          <li key={producto.id}>
-            {producto.nombre} - Cantidad: {producto.cantidad} - Precio por unidad: ${producto.precio}
+        {carrito.map((p) => (
+         <li key={p.id}>
+      
+         {p.nombre} - Cantidad: {p.cantidad} - Precio por unidad: ${p.precio} - subtotal ${p.precio*p.cantidad} - <img src={p.imagen}/>
           </li>
         ))}
       </ul>

@@ -13,15 +13,22 @@ export const ShoppingCartProvider = ({
       const [cantidad, setCantidad] = useState (0)
 
       const agregarProducto = (producto, cantidad) => {
-        alert (`vas a agregar ${cantidad} productos a tu carrito`)
-        const productoExistente = carrito.find ((p)=> p.id ===producto.id);
-        if (productoExistente>0){
-          const actualizarCarrito=[...carrito]
-          actualizarCarrito(productoExistente).cantidad += cantidad
-          setCarrito (actualizarCarrito)
+        const existingProductIndex = carrito.findIndex((prod) => prod.id === producto.id);
+        if (existingProductIndex !== -1) {
+          const updatedCart = [...carrito];
+          updatedCart[existingProductIndex].cantidad += cantidad;
+          setCarrito(updatedCart);
+        } else {
+          const numericPrice = parseFloat(producto.precio);
+          if (!isNaN(numericPrice)) {
+            setCarrito([...carrito, { ...producto, cantidad, precio: numericPrice }]);
+          } else {
+          }
         }
+      };
+        
 
-      }
+      
 
   
         const suma=()=>{
