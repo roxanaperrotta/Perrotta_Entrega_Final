@@ -8,7 +8,7 @@ import ItemCount from './ItemCount'
 
 const CartWidget = () => {
 const {badge}= useContext (CartContext) 
-const {cantidad} = useContext (CartContext)
+const {totalCantidad} = useContext (CartContext)
 
  return (
     <div>
@@ -22,7 +22,7 @@ const {cantidad} = useContext (CartContext)
             </Box>
             <Divider/>
             <Box>
-                <Badge p={0} bgColor='salmon'>{cantidad} </Badge>
+                <Badge p={0} bgColor='salmon'>{totalCantidad} </Badge>
             </Box>
           
         </Flex>

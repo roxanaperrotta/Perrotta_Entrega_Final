@@ -10,7 +10,7 @@ const Navbar = () => {
         <Flex>
             <Box p={0} >
               <Link to={"/"}>
-                <Image src="../imagenes/logo.PNG" class="milogo"> 
+                <Image src="../imagenes/logo.PNG" className="milogo"> 
                 </Image>
                 <h5>Comidas</h5>
               </Link>
@@ -19,7 +19,7 @@ const Navbar = () => {
             <Box>
                 <Menu>
                     <MenuButton p= {4} bgColor={'black'}>
-                         <p class="pcategoria">Categorías</p>
+                         <p className="pcategoria">Categorías</p>
                     </MenuButton>
                     <MenuList>
                        <MenuItem > 

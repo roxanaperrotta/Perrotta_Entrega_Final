@@ -6,6 +6,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { ToastContainer } from 'react-toastify'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,8 +26,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <ChakraProvider>
-     <App />
+  
+    <App />
+  
  </ChakraProvider>
   
 )

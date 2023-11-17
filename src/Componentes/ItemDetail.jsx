@@ -12,7 +12,7 @@ const ItemDetail = ({producto}) => {
  
  
   const {id}=useParams ()
-  const {agregarAlCarrito} = useContext (CartContext)
+  const {agregarAlCarrito, limpiarCantidad} = useContext (CartContext)
 
 
       
@@ -30,10 +30,10 @@ const ItemDetail = ({producto}) => {
             </CardBody>
             <Divider />
             <CardFooter>
-              <ButtonGroup spacing='2'>
+              <ButtonGroup spacing='4'>
               <ItemCount producto={producto}/> 
               </ButtonGroup>
-             
+              
             </CardFooter>
           </Card>    
         

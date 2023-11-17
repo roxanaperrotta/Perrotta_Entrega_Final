@@ -9,7 +9,8 @@ import ItemList from './Componentes/ItemList'
 import './App.css'
 import Form from './Componentes/Form'
 import { ShoppingCartProvider } from './context.jsx/ShoppingCartContext'
-import Rendering from './Componentes/Rendering'
+
+import Pedido from './Componentes/Pedido'
 
 
 
@@ -36,14 +37,16 @@ const App = () => {
 
                  <Route exact path='/productos/:id' element = {<ItemDetailContainer/>}/>
 
+                 <Route exact path="/Form" element={<Form />} />
+
+                 <Route exact path="/Pedido" element={<Pedido />} />
+
+
           </Routes>
      </ShoppingCartProvider>       
           </BrowserRouter>
    
-   {/* <>
-    <Form/>
-    </>
-*/}
+   
      
     </div>
   )

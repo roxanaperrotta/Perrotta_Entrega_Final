@@ -1,24 +1,24 @@
 import React from 'react'
-import { Flex, Box, Spacer, Card, CardBody, Stack, Heading, Divider, CardFooter, Button, ButtonGroup, Text, Image } from '@chakra-ui/react'
+import { Flex, Box, Spacer, Divider, Button, ButtonGroup, Text, Image, Toast } from '@chakra-ui/react'
+import{Link} from 'react-router-dom'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../context.jsx/ShoppingCartContext'
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 
 const ItemCount = ({producto}) => {
 
-  console.log(producto)
-  
+  //console.log(producto)
 
+    const {agregarProducto, carrito, cantidad, setCantidad, suma, resta, limpiarCantidad} = useContext(CartContext)
+   
+   const notify=() => toast("Se añadió su producto al carrito!",
+   {position:"top-right", autoClose:2000, hideProgressBar:false, cloeOnclick:true, pauseOnHover:true, draggable: true, progress:undefined, theme:"light", bgColor:"peach"});
 
-  
-   
-    const {agregarProducto, carrito, cantidad, setCantidad, suma, resta} = useContext(CartContext)
-   
-    
    
   
        
@@ -27,31 +27,44 @@ const ItemCount = ({producto}) => {
     <Flex>
         <Box>
     
-                <Button variant='solid' bgColor='peachpuff'>
-                    <button onClick={resta}>-</button>
+                <Button mt='1' onClick={resta} variant='solid' bgColor='peachpuff'>
+                    -
                 </Button>
         </Box>
-        <Divider/>
+        <Spacer/>
                 <p>{cantidad}</p>
-        <Divider/>
+     
         <Box>
 
-                <Button variant='solid' backgroundColor='peachpuff'>
-                    <button onClick={suma}>+</button>
+                <Button mt='1' onClick={suma} variant='solid' backgroundColor='peachpuff'>
+                  +
                 </Button>
         </Box>
         <Box >
-               <Button variant='solid' bgColor='black'>
-                 <button onClick ={() =>agregarProducto (producto, cantidad)}><h3>Agregar al Carrito</h3></button>
-          
+               <Button  mt='1' spacing='3' onClick ={() =>{agregarProducto (producto, cantidad); notify() }} variant='solid' bgColor='black'>
+               <h3>Agregar al Carrito</h3>
                </Button>
-               </Box>
-        <Divider/>
+              
+            <ToastContainer position="top-right" autoClose={2000} limit ={1} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false}/> 
+            
+            <Button  as={Link} to={'/Cart'} variant="solid" bgColor="black">
+            <h3>Ver Carrito</h3>
+          </Button>
 
-     
-    </Flex>
+          <Button onClick={limpiarCantidad} variant='solid' bgColor='black'>
+                      <Link to="/" className="Option">
+                             <h3>Seguir comprando</h3>
+                      </Link>
+                  </Button>
+          
+        </Box>
+
+ </Flex>
+
     </>
+    
   )
+  
 }
 
 

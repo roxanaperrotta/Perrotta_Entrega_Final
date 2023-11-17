@@ -12,7 +12,7 @@ const Item = ({nombre, imagen, id}) => {
       
                      <Image src={imagen}/>
     
-                     <Heading size='md'><h2>{nombre}</h2></Heading>
+                     <Heading className="headingh2" size='md'>{nombre}</Heading>
                  </Stack>
            </CardBody>
          <Divider/>
